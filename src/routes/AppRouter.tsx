@@ -9,6 +9,9 @@ import {
   import DashboardPage from "../pages/DashboardPage";
   import WebhooksPage from "../pages/WebhooksPage";
   import DeliveriesPage from "../pages/DeliveriesPage";
+import DeliveryDetailPage from "../pages/DeliveryDetailPage";
+import WebhookDetailPage from "../pages/WebhookDetailPage";
+import CreateWebhookPage from "../pages/CreateWebhookPage";
   
   export default function AppRouter() {
     return (
@@ -26,6 +29,21 @@ import {
               path="/deliveries"
               element={<DeliveriesPage />}
             />
+
+            <Route
+              path="/webhooks/:id"
+              element={<WebhookDetailPage />}
+            />
+
+           <Route
+              path="/webhooks/new"
+              element={<CreateWebhookPage />}
+            />
+
+           <Route
+             path="/deliveries/:id"
+             element={<DeliveryDetailPage />}
+           />
           </Routes>
         </AppLayout>
       </BrowserRouter>
