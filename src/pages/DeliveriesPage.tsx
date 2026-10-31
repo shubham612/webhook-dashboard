@@ -115,7 +115,7 @@ export default function DeliveriesPage() {
         <SelectFilter
           value={status}
           onChange={(value) => {
-            setPage(0);
+            setPage(1);
 
             setStatus(value);
           }}
@@ -123,6 +123,7 @@ export default function DeliveriesPage() {
             "SUCCESS",
             "FAILED",
             "PENDING",
+            "DEAD",
           ]}
           placeholder="All Status"
         />
